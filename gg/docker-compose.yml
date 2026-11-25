@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  shinobi:
+    image: shinobisystems/shinobi:latest
+    container_name: shinobi
+    restart: unless-stopped
+    ports:
+      - "8443:8080"
+    environment:
+      - ADMIN_USER=admin@shinobi.video
+      - ADMIN_PASSWORD=admin
+      - CRON_KEY=drishyamvms-cron-key
+      - PLUGINKEY_MOTION=drishyamvms-motion-key
+      - PLUGINKEY_OPENCV=drishyamvms-opencv-key
+      - PLUGINKEY_OPENALPR=drishyamvms-openalpr-key
+    volumes:
+      - shinobi_config:/config
+      - shinobi_data:/opt/shinobi/videos
+      - shinobi_db:/var/lib/mysql
+      - /dev/shm:/dev/shm
+      - ./shinobi-super.json:/home/Shinobi/super.json:ro
+      - ./shinobi-monitor-patch.js:/home/Shinobi/libs/monitor.js:ro
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+
+volumes:
+  shinobi_config:
+  shinobi_data:
+  shinobi_db:

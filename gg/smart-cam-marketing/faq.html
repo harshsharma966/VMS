@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Smart-Cam VMS</title>
+    <meta name="description" content="Frequently asked questions about Smart-Cam construction camera monitoring system.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F7983A',
+                        'neutral-0': '#FFFFFF',
+                        'neutral-100': '#F1F2F6',
+                        'neutral-200': '#E5E7EB',
+                        'neutral-300': '#D1D5DB',
+                        'neutral-500': '#6B7280',
+                        'neutral-700': '#374151',
+                        'neutral-900': '#111827',
+                        'red': '#EF4444',
+                        'green': '#10B981',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="font-inter bg-neutral-0 text-neutral-700">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        <nav class="container mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="ph ph-video-camera text-white text-2xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-neutral-900">Smart-Cam</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#features" class="text-neutral-700 hover:text-primary font-medium transition-colors">Features</a>
+                    <a href="pricing.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Pricing</a>
+                    <a href="faq.html" class="text-primary font-semibold">FAQ</a>
+                    <a href="contact.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Contact</a>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="login.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Login</a>
+                    <a href="register.html" class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary/30">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-neutral-700 hover:text-primary">
+                    <i class="ph ph-list text-3xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-6">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-neutral-700 hover:text-primary font-medium">Home</a>
+                    <a href="index.html#features" class="text-neutral-700 hover:text-primary font-medium">Features</a>
+                    <a href="pricing.html" class="text-neutral-700 hover:text-primary font-medium">Pricing</a>
+                    <a href="faq.html" class="text-primary font-semibold">FAQ</a>
+                    <a href="contact.html" class="text-neutral-700 hover:text-primary font-medium">Contact</a>
+                    <div class="border-t border-neutral-200 pt-4 flex flex-col space-y-3">
+                        <a href="login.html" class="text-neutral-700 hover:text-primary font-medium">Login</a>
+                        <a href="register.html" class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-medium text-center">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-neutral-100 via-white to-orange-50 pt-20 pb-16">
+        <div class="container mx-auto px-6 lg:px-12 text-center">
+            <div class="max-w-3xl mx-auto">
+                <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                    ❓ Help Center
+                </span>
+                <h1 class="text-5xl lg:text-6xl font-bold text-neutral-900 mt-6 mb-6">
+                    Frequently Asked Questions
+                </h1>
+                <p class="text-xl text-neutral-500">
+                    Find answers to common questions about Smart-Cam VMS and our services.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Sections -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="max-w-4xl mx-auto">
+
+                <!-- General Questions -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-neutral-900 mb-8">General Questions</h2>
+                    <div class="space-y-4">
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                What is Smart-Cam VMS?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                Smart-Cam VMS is an advanced video management system specifically designed for construction sites. It provides real-time monitoring, automatic timelapse generation, cloud storage, and powerful analytics to help you manage your construction projects more effectively.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                How does the free trial work?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                We offer a 14-day free trial with full access to all features. No credit card is required to start. During the trial, you can test all our features, connect your cameras, and experience the full power of Smart-Cam VMS. After the trial, you can choose a plan that fits your needs.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                What cameras are compatible with Smart-Cam?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                Smart-Cam supports most IP cameras with RTSP/RTMP streams. We're compatible with major brands including Hikvision, Dahua, Axis, and more. If you're unsure about your camera's compatibility, contact our support team for assistance.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                Can I access my cameras from mobile devices?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                Yes! Our web application is fully responsive and works on smartphones and tablets. You can view live streams, playback recordings, and manage your cameras from any device with a web browser.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Technical Questions -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-neutral-900 mb-8">Technical Questions</h2>
+                    <div class="space-y-4">
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                How secure is my video data?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                We take security seriously. All video streams are encrypted end-to-end using industry-standard AES-256 encryption. We're SOC 2 certified and GDPR compliant. Your data is stored in secure data centers with multiple redundancy layers and regular security audits.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                What's the uptime guarantee?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                We offer a 99.9% uptime SLA for all plans. Our infrastructure is built on enterprise-grade servers with automatic failover and redundancy. In the rare event of downtime, we'll credit your account proportionally.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                How does cloud storage work?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                Your video footage is automatically uploaded to our secure cloud servers. Storage is allocated based on your plan (100GB to 10PB+). Older footage is automatically archived but remains accessible. You can download recordings anytime, and we keep multiple backup copies for redundancy.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                What internet speed do I need?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                For optimal performance, we recommend: Upload speed of 5-10 Mbps per HD camera, Download speed of 10-20 Mbps for viewing live streams. Our system automatically adapts to your bandwidth, so it will work with slower connections at reduced quality.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Billing & Account -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-neutral-900 mb-8">Billing & Account</h2>
+                    <div class="space-y-4">
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                Can I upgrade or downgrade my plan?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                Yes! You can change your plan at any time from your account dashboard. Upgrades take effect immediately. Downgrades will be applied at the end of your current billing cycle. We'll prorate any charges accordingly.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                What payment methods do you accept?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                We accept all major credit cards (Visa, MasterCard, American Express, Discover), PayPal, and bank transfers for annual plans. Enterprise customers can also pay via invoice with NET 30 terms.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                Is there a setup fee?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                No, we don't charge any setup fees for Starter and Professional plans. Enterprise plans may include optional white-glove onboarding and training services at an additional cost.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                What's your refund policy?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                We offer a 30-day money-back guarantee on all annual plans. If you're not satisfied within the first 30 days, we'll issue a full refund. Monthly plans are non-refundable, but you can cancel anytime with no penalties.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                Can I cancel my subscription?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                Yes, you can cancel your subscription at any time from your account settings. There are no cancellation fees. Your access will continue until the end of your current billing period, and we'll export all your data for you.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h2 class="text-3xl font-bold text-neutral-900 mb-8">Support</h2>
+                    <div class="space-y-4">
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                What support channels are available?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                We offer email support for all plans, priority email support for Professional plans, and 24/7 phone support for Enterprise customers. We also have comprehensive documentation, video tutorials, and a community forum.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                How long does it take to set up?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                Most customers are up and running within 30 minutes. The process is: 1) Sign up for an account, 2) Add your camera details (IP, credentials), 3) Start streaming! We provide step-by-step guides and can assist with setup if needed.
+                            </p>
+                        </details>
+
+                        <details class="bg-neutral-100 rounded-xl p-6 cursor-pointer group">
+                            <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                                Do you offer training?
+                                <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                            </summary>
+                            <p class="text-neutral-500 mt-4 leading-relaxed">
+                                Yes! We offer free webinar training sessions for all customers. Enterprise customers receive personalized on-site or virtual training sessions as part of their onboarding process.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-neutral-100 to-orange-50">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+                    Still Have Questions?
+                </h2>
+                <p class="text-xl text-neutral-500 mb-10">
+                    Our support team is here to help. Contact us and we'll get back to you within 24 hours.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="contact.html" class="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl shadow-primary/30">
+                        Contact Support
+                    </a>
+                    <a href="register.html" class="border-2 border-neutral-300 hover:border-primary text-neutral-900 hover:text-primary px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-white py-16">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="ph ph-video-camera text-white text-2xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Smart-Cam</span>
+                    </div>
+                    <p class="text-neutral-400 leading-relaxed">
+                        Advanced video management system for construction sites and projects worldwide.
+                    </p>
+                </div>
+
+                <!-- Product Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#features" class="text-neutral-400 hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="pricing.html" class="text-neutral-400 hover:text-primary transition-colors">Pricing</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">API</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-neutral-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="faq.html" class="text-neutral-400 hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-neutral-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-neutral-400 text-sm">
+                        © 2026 Smart-Cam VMS. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-facebook-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-twitter-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-linkedin-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-instagram-logo text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Smart-Cam VMS</title>
+    <meta name="description" content="Create your Smart-Cam account and start monitoring your construction site today.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F7983A',
+                        'neutral-0': '#FFFFFF',
+                        'neutral-100': '#F1F2F6',
+                        'neutral-200': '#E5E7EB',
+                        'neutral-300': '#D1D5DB',
+                        'neutral-500': '#6B7280',
+                        'neutral-700': '#374151',
+                        'neutral-900': '#111827',
+                        'red': '#EF4444',
+                        'green': '#10B981',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="font-inter bg-gradient-to-br from-neutral-100 via-white to-orange-50">
+
+    <!-- Register Container -->
+    <div class="min-h-screen flex items-center justify-center px-6 py-12">
+        <div class="w-full max-w-md">
+
+            <!-- Logo -->
+            <div class="text-center mb-8">
+                <a href="index.html" class="inline-flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                        <i class="ph ph-video-camera text-white text-3xl"></i>
+                    </div>
+                    <span class="text-3xl font-bold text-neutral-900">Smart-Cam</span>
+                </a>
+            </div>
+
+            <!-- Register Card -->
+            <div class="bg-white rounded-2xl shadow-2xl p-8 lg:p-10">
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-neutral-900 mb-2">Create Account</h1>
+                    <p class="text-neutral-500">Start your 14-day free trial today</p>
+                </div>
+
+                <!-- Register Form -->
+                <form id="register-form" class="space-y-6">
+                    <!-- Full Name -->
+                    <div>
+                        <label for="fullname" class="block text-sm font-semibold text-neutral-900 mb-2">
+                            Full Name
+                        </label>
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            required
+                            class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                            placeholder="John Doe"
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-neutral-900 mb-2">
+                            Email Address
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                            placeholder="you@company.com"
+                        >
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <label for="company" class="block text-sm font-semibold text-neutral-900 mb-2">
+                            Company Name
+                        </label>
+                        <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                            placeholder="Your Construction Company"
+                        >
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+                        <label for="password" class="block text-sm font-semibold text-neutral-900 mb-2">
+                            Password
+                        </label>
+                        <div class="relative">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                required
+                                minlength="8"
+                                class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all pr-12"
+                                placeholder="Min. 8 characters"
+                            >
+                            <button
+                                type="button"
+                                id="toggle-password"
+                                class="absolute right-4 top-1/2 transform -translate-y-1/2 text-neutral-500 hover:text-neutral-700"
+                            >
+                                <i class="ph ph-eye text-xl"></i>
+                            </button>
+                        </div>
+                        <p class="text-xs text-neutral-500 mt-2">
+                            Must be at least 8 characters long
+                        </p>
+                    </div>
+
+                    <!-- Terms & Conditions -->
+                    <div>
+                        <label class="flex items-start space-x-3 cursor-pointer">
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required
+                                class="w-4 h-4 text-primary border-neutral-300 rounded focus:ring-2 focus:ring-primary mt-1"
+                            >
+                            <span class="text-sm text-neutral-700">
+                                I agree to the <a href="#" class="text-primary hover:text-orange-600 font-medium">Terms of Service</a> and <a href="#" class="text-primary hover:text-orange-600 font-medium">Privacy Policy</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button
+                        type="submit"
+                        class="w-full bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40"
+                    >
+                        Create Account
+                    </button>
+
+                    <!-- Features List -->
+                    <div class="bg-neutral-100 rounded-lg p-4 space-y-2">
+                        <p class="font-semibold text-neutral-900 text-sm mb-3">What's included:</p>
+                        <div class="flex items-center space-x-2 text-sm text-neutral-700">
+                            <i class="ph-fill ph-check-circle text-green"></i>
+                            <span>14-day free trial</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-neutral-700">
+                            <i class="ph-fill ph-check-circle text-green"></i>
+                            <span>No credit card required</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-neutral-700">
+                            <i class="ph-fill ph-check-circle text-green"></i>
+                            <span>Full access to all features</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-neutral-700">
+                            <i class="ph-fill ph-check-circle text-green"></i>
+                            <span>Cancel anytime</span>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Divider -->
+                <div class="relative my-8">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-neutral-200"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-4 bg-white text-neutral-500">Or sign up with</span>
+                    </div>
+                </div>
+
+                <!-- Social Sign Up -->
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="flex items-center justify-center space-x-2 px-4 py-3 border border-neutral-300 rounded-lg hover:bg-neutral-50 transition-colors">
+                        <i class="ph-fill ph-google-logo text-xl"></i>
+                        <span class="font-medium text-neutral-700">Google</span>
+                    </button>
+                    <button class="flex items-center justify-center space-x-2 px-4 py-3 border border-neutral-300 rounded-lg hover:bg-neutral-50 transition-colors">
+                        <i class="ph-fill ph-microsoft-outlook-logo text-xl"></i>
+                        <span class="font-medium text-neutral-700">Microsoft</span>
+                    </button>
+                </div>
+
+                <!-- Login Link -->
+                <p class="text-center text-neutral-500 mt-8">
+                    Already have an account?
+                    <a href="login.html" class="text-primary hover:text-orange-600 font-semibold">
+                        Sign in
+                    </a>
+                </p>
+            </div>
+
+            <!-- Back to Home -->
+            <div class="text-center mt-8">
+                <a href="index.html" class="text-neutral-500 hover:text-primary flex items-center justify-center space-x-2">
+                    <i class="ph ph-arrow-left"></i>
+                    <span>Back to home</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Toggle password visibility
+        document.getElementById('toggle-password')?.addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.className = 'ph ph-eye-slash text-xl';
+            } else {
+                passwordInput.type = 'password';
+                icon.className = 'ph ph-eye text-xl';
+            }
+        });
+
+        // Handle form submission
+        document.getElementById('register-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const password = document.getElementById('password').value;
+
+            // TODO: Replace with actual API call
+            console.log('Registration attempt:', { fullname, email, company, password });
+
+            // Simulate registration - redirect to app
+            // window.location.href = 'https://app.drishyamvms.com/onboarding';
+        });
+    </script>
+</body>
+</html>

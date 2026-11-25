@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart-Cam - Advanced Construction Camera VMS</title>
+    <meta name="description" content="Smart-Cam provides cutting-edge video management solutions for construction sites with real-time monitoring, timelapse, and advanced analytics.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F7983A',
+                        'neutral-0': '#FFFFFF',
+                        'neutral-100': '#F1F2F6',
+                        'neutral-200': '#E5E7EB',
+                        'neutral-300': '#D1D5DB',
+                        'neutral-500': '#6B7280',
+                        'neutral-700': '#374151',
+                        'neutral-900': '#111827',
+                        'red': '#EF4444',
+                        'green': '#10B981',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="font-inter bg-neutral-0 text-neutral-700">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        <nav class="container mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="ph ph-video-camera text-white text-2xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-neutral-900">Smart-Cam</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="#features" class="text-neutral-700 hover:text-primary font-medium transition-colors">Features</a>
+                    <a href="pricing.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Pricing</a>
+                    <a href="faq.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">FAQ</a>
+                    <a href="contact.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Contact</a>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="login.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Login</a>
+                    <a href="register.html" class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary/30">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-neutral-700 hover:text-primary">
+                    <i class="ph ph-list text-3xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-6">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-neutral-700 hover:text-primary font-medium">Home</a>
+                    <a href="#features" class="text-neutral-700 hover:text-primary font-medium">Features</a>
+                    <a href="pricing.html" class="text-neutral-700 hover:text-primary font-medium">Pricing</a>
+                    <a href="faq.html" class="text-neutral-700 hover:text-primary font-medium">FAQ</a>
+                    <a href="contact.html" class="text-neutral-700 hover:text-primary font-medium">Contact</a>
+                    <div class="border-t border-neutral-200 pt-4 flex flex-col space-y-3">
+                        <a href="login.html" class="text-neutral-700 hover:text-primary font-medium">Login</a>
+                        <a href="register.html" class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-medium text-center">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-neutral-100 via-white to-orange-50 pt-20 pb-32 overflow-hidden">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8">
+                    <div class="inline-block">
+                        <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                            🚀 Advanced VMS Solution
+                        </span>
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight">
+                        Monitor Your Construction Site
+                        <span class="text-primary">24/7</span>
+                    </h1>
+                    <p class="text-xl text-neutral-500 leading-relaxed">
+                        Smart-Cam delivers cutting-edge video management for construction projects with real-time monitoring, automatic timelapse generation, and powerful analytics.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="register.html" class="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40">
+                            Start Free Trial
+                        </a>
+                        <a href="#features" class="border-2 border-neutral-300 hover:border-primary text-neutral-700 hover:text-primary px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                            Learn More
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-8 pt-4">
+                        <div class="flex items-center space-x-2">
+                            <i class="ph-fill ph-check-circle text-green text-2xl"></i>
+                            <span class="text-neutral-700 font-medium">No Credit Card Required</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="ph-fill ph-check-circle text-green text-2xl"></i>
+                            <span class="text-neutral-700 font-medium">14-Day Free Trial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <div class="aspect-video bg-neutral-200 flex items-center justify-center">
+                            <i class="ph ph-video-camera text-neutral-400 text-9xl"></i>
+                        </div>
+                        <!-- Overlay Stats -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl">
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">99.9%</div>
+                                    <div class="text-sm text-neutral-500">Uptime</div>
+                                </div>
+                                <div class="text-center border-l border-r border-neutral-200">
+                                    <div class="text-2xl font-bold text-primary">10PB</div>
+                                    <div class="text-sm text-neutral-500">Storage</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">24/7</div>
+                                    <div class="text-sm text-neutral-500">Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 -mt-40 -mr-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-40 -ml-40 w-96 h-96 bg-orange-300/5 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-12">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold text-lg">POWERFUL FEATURES</span>
+                <h2 class="text-4xl lg:text-5xl font-bold text-neutral-900 mt-4 mb-6">
+                    Everything You Need to Monitor Your Site
+                </h2>
+                <p class="text-xl text-neutral-500">
+                    From live streaming to automated timelapse generation, Smart-Cam has all the tools you need for comprehensive site monitoring.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="group bg-neutral-100 hover:bg-white border-2 border-transparent hover:border-primary rounded-2xl p-8 transition-all hover:shadow-xl">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all">
+                        <i class="ph-fill ph-video-camera text-primary group-hover:text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-4">Live Streaming</h3>
+                    <p class="text-neutral-500 leading-relaxed">
+                        Monitor your construction site in real-time with high-definition live streaming from multiple cameras simultaneously.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="group bg-neutral-100 hover:bg-white border-2 border-transparent hover:border-primary rounded-2xl p-8 transition-all hover:shadow-xl">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all">
+                        <i class="ph-fill ph-clock-clockwise text-primary group-hover:text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-4">Auto Timelapse</h3>
+                    <p class="text-neutral-500 leading-relaxed">
+                        Automatically generate stunning timelapse videos of your construction progress without any manual intervention.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="group bg-neutral-100 hover:bg-white border-2 border-transparent hover:border-primary rounded-2xl p-8 transition-all hover:shadow-xl">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all">
+                        <i class="ph-fill ph-cloud-arrow-up text-primary group-hover:text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-4">Cloud Storage</h3>
+                    <p class="text-neutral-500 leading-relaxed">
+                        Store up to 10PB of video footage securely in the cloud with automatic backups and redundancy.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="group bg-neutral-100 hover:bg-white border-2 border-transparent hover:border-primary rounded-2xl p-8 transition-all hover:shadow-xl">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all">
+                        <i class="ph-fill ph-chart-line text-primary group-hover:text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-4">Advanced Analytics</h3>
+                    <p class="text-neutral-500 leading-relaxed">
+                        Get insights into site activity, worker presence, equipment usage, and project progress with AI-powered analytics.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="group bg-neutral-100 hover:bg-white border-2 border-transparent hover:border-primary rounded-2xl p-8 transition-all hover:shadow-xl">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all">
+                        <i class="ph-fill ph-map-pin text-primary group-hover:text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-4">Map View</h3>
+                    <p class="text-neutral-500 leading-relaxed">
+                        Visualize all your camera locations on an interactive map for easy navigation and site overview.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="group bg-neutral-100 hover:bg-white border-2 border-transparent hover:border-primary rounded-2xl p-8 transition-all hover:shadow-xl">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all">
+                        <i class="ph-fill ph-shield-check text-primary group-hover:text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-4">Secure & Reliable</h3>
+                    <p class="text-neutral-500 leading-relaxed">
+                        Enterprise-grade security with encrypted video streams, user authentication, and role-based access control.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upgrade Section -->
+    <section class="py-20 bg-gradient-to-br from-neutral-100 to-orange-50">
+        <div class="container mx-auto px-6 lg:px-12">
+            <!-- Section Header -->
+            <div class="mb-16">
+                <span class="text-primary font-semibold text-lg">ADVANCED CAPABILITIES</span>
+                <div class="grid lg:grid-cols-2 gap-12 mt-6">
+                    <div>
+                        <h2 class="text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight">
+                            Take Your Site Monitoring to the Next Level
+                        </h2>
+                    </div>
+                    <div>
+                        <p class="text-xl text-neutral-500 leading-relaxed">
+                            Upgrade your construction monitoring with advanced features designed for large-scale projects and enterprise needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upgrade Cards Grid -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- X-Ray Mode Card -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="aspect-video bg-gradient-to-br from-primary/20 to-orange-200/30 flex items-center justify-center">
+                        <i class="ph-fill ph-eye text-primary text-8xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-neutral-900 mb-4">X-Ray Mode</h3>
+                        <p class="text-neutral-500 text-lg leading-relaxed mb-6">
+                            See through walls and structures with our AI-powered X-Ray mode. Perfect for monitoring progress in multi-story buildings and complex construction sites.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center space-x-3">
+                                <i class="ph-fill ph-check-circle text-green text-xl"></i>
+                                <span class="text-neutral-700">AI-powered structure detection</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="ph-fill ph-check-circle text-green text-xl"></i>
+                                <span class="text-neutral-700">Multi-floor visualization</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="ph-fill ph-check-circle text-green text-xl"></i>
+                                <span class="text-neutral-700">Real-time progress tracking</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Team Collaboration Card -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                        <i class="ph-fill ph-users-three text-blue-600 text-8xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-neutral-900 mb-4">Team Collaboration</h3>
+                        <p class="text-neutral-500 text-lg leading-relaxed mb-6">
+                            Work together seamlessly with your entire team. Share camera feeds, annotations, and insights in real-time with stakeholders.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center space-x-3">
+                                <i class="ph-fill ph-check-circle text-green text-xl"></i>
+                                <span class="text-neutral-700">Role-based permissions</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="ph-fill ph-check-circle text-green text-xl"></i>
+                                <span class="text-neutral-700">Live annotations & comments</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="ph-fill ph-check-circle text-green text-xl"></i>
+                                <span class="text-neutral-700">Instant notifications</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Ready to Transform Your Construction Monitoring?
+                </h2>
+                <p class="text-xl text-white/90 mb-10">
+                    Join thousands of construction companies using Smart-Cam to monitor their projects more effectively.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="register.html" class="bg-white hover:bg-neutral-100 text-primary px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl">
+                        Start Your Free Trial
+                    </a>
+                    <a href="contact.html" class="border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-white py-16">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="ph ph-video-camera text-white text-2xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Smart-Cam</span>
+                    </div>
+                    <p class="text-neutral-400 leading-relaxed">
+                        Advanced video management system for construction sites and projects worldwide.
+                    </p>
+                </div>
+
+                <!-- Product Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-neutral-400 hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="pricing.html" class="text-neutral-400 hover:text-primary transition-colors">Pricing</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">API</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-neutral-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="faq.html" class="text-neutral-400 hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-neutral-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-neutral-400 text-sm">
+                        © 2026 Smart-Cam VMS. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-facebook-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-twitter-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-linkedin-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-instagram-logo text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

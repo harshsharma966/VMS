@@ -1,0 +1,2 @@
+INSERT INTO Users (ke, uid, mail, pass, auth, details) VALUES ('6b17427adfc70df0b5415ffd73a1e243', '5dff221a758a02fb1479b21a533fca25', 'test@drishyam.com', '07480fb9e85b9396af06f006cf1c95024af2531c65fb505cfbd0add1e2f31573', '9933d9242774172f5cfa2c9e8f8a86f7', '{"sub":true,"allmonitors":"1","monitor_create":"1","monitor_edit":"1","monitor_delete":"1","video_delete":"1","video_view":"1"}');
+SELECT ke, mail, auth FROM Users WHERE mail='test@drishyam.com';

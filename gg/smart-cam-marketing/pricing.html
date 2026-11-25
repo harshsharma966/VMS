@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Smart-Cam VMS</title>
+    <meta name="description" content="Choose the perfect plan for your construction monitoring needs. Flexible pricing for projects of all sizes.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F7983A',
+                        'neutral-0': '#FFFFFF',
+                        'neutral-100': '#F1F2F6',
+                        'neutral-200': '#E5E7EB',
+                        'neutral-300': '#D1D5DB',
+                        'neutral-500': '#6B7280',
+                        'neutral-700': '#374151',
+                        'neutral-900': '#111827',
+                        'red': '#EF4444',
+                        'green': '#10B981',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="font-inter bg-neutral-0 text-neutral-700">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        <nav class="container mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="ph ph-video-camera text-white text-2xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-neutral-900">Smart-Cam</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#features" class="text-neutral-700 hover:text-primary font-medium transition-colors">Features</a>
+                    <a href="pricing.html" class="text-primary font-semibold">Pricing</a>
+                    <a href="faq.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">FAQ</a>
+                    <a href="contact.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Contact</a>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="login.html" class="text-neutral-700 hover:text-primary font-medium transition-colors">Login</a>
+                    <a href="register.html" class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary/30">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-neutral-700 hover:text-primary">
+                    <i class="ph ph-list text-3xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-6">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-neutral-700 hover:text-primary font-medium">Home</a>
+                    <a href="index.html#features" class="text-neutral-700 hover:text-primary font-medium">Features</a>
+                    <a href="pricing.html" class="text-primary font-semibold">Pricing</a>
+                    <a href="faq.html" class="text-neutral-700 hover:text-primary font-medium">FAQ</a>
+                    <a href="contact.html" class="text-neutral-700 hover:text-primary font-medium">Contact</a>
+                    <div class="border-t border-neutral-200 pt-4 flex flex-col space-y-3">
+                        <a href="login.html" class="text-neutral-700 hover:text-primary font-medium">Login</a>
+                        <a href="register.html" class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-medium text-center">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-neutral-100 via-white to-orange-50 pt-20 pb-16">
+        <div class="container mx-auto px-6 lg:px-12 text-center">
+            <div class="max-w-3xl mx-auto">
+                <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                    💰 Transparent Pricing
+                </span>
+                <h1 class="text-5xl lg:text-6xl font-bold text-neutral-900 mt-6 mb-6">
+                    Choose Your Perfect Plan
+                </h1>
+                <p class="text-xl text-neutral-500">
+                    Flexible pricing designed for construction projects of all sizes. Start free, upgrade anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+                <!-- Starter Plan -->
+                <div class="bg-neutral-100 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-neutral-900 mb-2">Starter</h3>
+                        <p class="text-neutral-500">Perfect for small projects</p>
+                    </div>
+                    <div class="mb-8">
+                        <div class="flex items-baseline">
+                            <span class="text-5xl font-bold text-neutral-900">$99</span>
+                            <span class="text-neutral-500 ml-2">/month</span>
+                        </div>
+                        <p class="text-sm text-neutral-500 mt-2">Billed monthly</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Up to 5 cameras</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">100GB cloud storage</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Live streaming</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Basic timelapse</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">30-day recording history</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Email support</span>
+                        </li>
+                    </ul>
+                    <a href="register.html?plan=starter" class="block w-full bg-white border-2 border-neutral-300 hover:border-primary text-neutral-900 hover:text-primary text-center px-6 py-3 rounded-full font-semibold transition-all">
+                        Start Free Trial
+                    </a>
+                </div>
+
+                <!-- Professional Plan (Most Popular) -->
+                <div class="bg-primary rounded-2xl p-8 shadow-2xl transform scale-105 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-white text-primary px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                            MOST POPULAR
+                        </span>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Professional</h3>
+                        <p class="text-white/90">For growing businesses</p>
+                    </div>
+                    <div class="mb-8">
+                        <div class="flex items-baseline">
+                            <span class="text-5xl font-bold text-white">$299</span>
+                            <span class="text-white/90 ml-2">/month</span>
+                        </div>
+                        <p class="text-sm text-white/80 mt-2">Billed monthly or $2,990/year (save $598)</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-white text-xl mt-0.5"></i>
+                            <span class="text-white">Up to 25 cameras</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-white text-xl mt-0.5"></i>
+                            <span class="text-white">1TB cloud storage</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-white text-xl mt-0.5"></i>
+                            <span class="text-white">HD live streaming</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-white text-xl mt-0.5"></i>
+                            <span class="text-white">Advanced timelapse</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-white text-xl mt-0.5"></i>
+                            <span class="text-white">90-day recording history</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-white text-xl mt-0.5"></i>
+                            <span class="text-white">AI analytics</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-white text-xl mt-0.5"></i>
+                            <span class="text-white">Team collaboration</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-white text-xl mt-0.5"></i>
+                            <span class="text-white">Priority support</span>
+                        </li>
+                    </ul>
+                    <a href="register.html?plan=professional" class="block w-full bg-white text-primary text-center px-6 py-3 rounded-full font-semibold hover:bg-neutral-100 transition-all">
+                        Start Free Trial
+                    </a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-neutral-100 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-neutral-900 mb-2">Enterprise</h3>
+                        <p class="text-neutral-500">For large-scale operations</p>
+                    </div>
+                    <div class="mb-8">
+                        <div class="flex items-baseline">
+                            <span class="text-5xl font-bold text-neutral-900">Custom</span>
+                        </div>
+                        <p class="text-sm text-neutral-500 mt-2">Contact for pricing</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Unlimited cameras</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">10PB+ cloud storage</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">4K live streaming</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Custom timelapse features</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Unlimited recording history</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Advanced AI analytics</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">X-Ray mode</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Dedicated account manager</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">24/7 phone support</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="ph-fill ph-check-circle text-green text-xl mt-0.5"></i>
+                            <span class="text-neutral-700">Custom integrations</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="block w-full bg-neutral-900 hover:bg-neutral-800 text-white text-center px-6 py-3 rounded-full font-semibold transition-all">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="mt-16 text-center">
+                <p class="text-neutral-500 mb-6">
+                    All plans include a 14-day free trial. No credit card required.
+                </p>
+                <div class="flex flex-wrap justify-center gap-8 text-sm text-neutral-500">
+                    <div class="flex items-center space-x-2">
+                        <i class="ph-fill ph-shield-check text-green text-xl"></i>
+                        <span>SOC 2 Certified</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="ph-fill ph-shield-check text-green text-xl"></i>
+                        <span>GDPR Compliant</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="ph-fill ph-shield-check text-green text-xl"></i>
+                        <span>99.9% Uptime SLA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-neutral-100">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-neutral-900 text-center mb-12">
+                    Frequently Asked Questions
+                </h2>
+                <div class="space-y-6">
+                    <details class="bg-white rounded-xl p-6 cursor-pointer group">
+                        <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                            Can I change my plan later?
+                            <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="text-neutral-500 mt-4">
+                            Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate your billing accordingly.
+                        </p>
+                    </details>
+
+                    <details class="bg-white rounded-xl p-6 cursor-pointer group">
+                        <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                            What payment methods do you accept?
+                            <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="text-neutral-500 mt-4">
+                            We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for Enterprise plans.
+                        </p>
+                    </details>
+
+                    <details class="bg-white rounded-xl p-6 cursor-pointer group">
+                        <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                            Is there a setup fee?
+                            <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="text-neutral-500 mt-4">
+                            No setup fees for Starter and Professional plans. Enterprise plans may include optional onboarding services.
+                        </p>
+                    </details>
+
+                    <details class="bg-white rounded-xl p-6 cursor-pointer group">
+                        <summary class="font-semibold text-lg text-neutral-900 flex items-center justify-between">
+                            Can I cancel anytime?
+                            <i class="ph ph-caret-down text-xl group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <p class="text-neutral-500 mt-4">
+                            Absolutely. You can cancel your subscription at any time. Your access will continue until the end of your current billing period.
+                        </p>
+                    </details>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-neutral-500 mb-4">Still have questions?</p>
+                    <a href="faq.html" class="text-primary hover:text-orange-600 font-semibold">
+                        View All FAQs →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-white py-16">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="ph ph-video-camera text-white text-2xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Smart-Cam</span>
+                    </div>
+                    <p class="text-neutral-400 leading-relaxed">
+                        Advanced video management system for construction sites and projects worldwide.
+                    </p>
+                </div>
+
+                <!-- Product Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#features" class="text-neutral-400 hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="pricing.html" class="text-neutral-400 hover:text-primary transition-colors">Pricing</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">API</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-neutral-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="faq.html" class="text-neutral-400 hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-primary transition-colors">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-neutral-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-neutral-400 text-sm">
+                        © 2026 Smart-Cam VMS. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-facebook-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-twitter-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-linkedin-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-primary transition-colors">
+                            <i class="ph-fill ph-instagram-logo text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

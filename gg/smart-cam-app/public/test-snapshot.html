@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snapshot Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            border: 2px solid #ccc;
+            margin: 10px 0;
+        }
+        .info {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Camera Snapshot Test</h1>
+
+    <div class="info">
+        <strong>Snapshot URL:</strong><br>
+        <span id="snapshot-url">Loading...</span>
+    </div>
+
+    <div class="info">
+        <strong>Status:</strong> <span id="status">Initializing...</span>
+    </div>
+
+    <h2>Live Snapshot (Auto-refresh every 1 second)</h2>
+    <img id="snapshot" alt="Camera snapshot">
+
+    <script>
+        const API_KEY = 'f07483f48995f5ada7e2033d6c7b34a4';
+        const GROUP_KEY = '6b17427adfc70df0b5415ffd73a1e243';
+        const MONITOR_ID = '66321aea1468a0220d536968'; // Camera 01
+        const SHINOBI_URL = 'http://localhost:8443';
+
+        const snapshotUrl = `${SHINOBI_URL}/${API_KEY}/jpeg/${GROUP_KEY}/${MONITOR_ID}/s.jpg`;
+
+        document.getElementById('snapshot-url').textContent = snapshotUrl;
+
+        const img = document.getElementById('snapshot');
+        const status = document.getElementById('status');
+
+        function refreshSnapshot() {
+            const url = `${snapshotUrl}?t=${Date.now()}`;
+            img.src = url;
+        }
+
+        img.onload = function() {
+            status.textContent = 'Loaded successfully! ✅';
+            status.style.color = 'green';
+        };
+
+        img.onerror = function() {
+            status.textContent = 'Failed to load ❌ - Check if Shinobi is running';
+            status.style.color = 'red';
+        };
+
+        // Start auto-refresh
+        refreshSnapshot();
+        setInterval(refreshSnapshot, 1000);
+    </script>
+</body>
+</html>
